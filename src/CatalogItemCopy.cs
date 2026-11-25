@@ -22,8 +22,8 @@ namespace Clc.Api.Models
 
         public int YTDInHouseUseCount { get; set; }
         public int YTDCircCount { get; set; }
-        public int PrevYTDInHouseUseCount { get; set; }
-        public int PrevYTDCircCount { get; set; }
+        public int PrevYearInHouseUseCount { get; set; }
+        public int PrevYearCircCount { get; set; }
 
         public int LifetimeInHouseUseCount { get; set; }
         public int LifetimeCircCount { get; set; }
