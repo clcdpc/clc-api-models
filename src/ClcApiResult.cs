@@ -12,23 +12,14 @@ namespace Clc.Api.Models
             
         }
 
-        public ClcApiResult(PatronIdResult patronIdResult)
+        public ClcApiResult(int errorCode, string errorMessage)
         {
-            ErrorCode = patronIdResult.ErrorCode;
-            ErrorMessage = patronIdResult.ErrorMessage;
+            ErrorCode = errorCode;
+            ErrorMessage = errorMessage;
         }
 
-        public static NotFoundObjectResult PatronIdNotFoundResult(string barcode) => new(new ClcApiResult { ErrorCode = -3000, ErrorMessage = $"No patron found for barcode {barcode}" });
+        public static NotFoundObjectResult PatronIdNotFound(string barcode) => new(new ClcApiResult(-3000, $"No patron found for barcode {barcode}"));
 
         public override string ToString() => $"{ErrorCode} - {ErrorMessage}";
-    }
-
-    public class PatronIdNotFoundResult : ClcApiResult
-    {
-        public PatronIdNotFoundResult(string barcode)
-        {
-            ErrorCode = -3000;
-            ErrorMessage = $"No patron found for barcode {barcode}";
-        }
     }
 }

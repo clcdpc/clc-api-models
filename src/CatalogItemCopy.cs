@@ -13,6 +13,9 @@ namespace Clc.Api.Models
         public int ItemStatusID { get; set; }
         public string ItemStatusDescription { get; set; } = string.Empty;
         public int ItemRecordID { get; set; }
+        public string MaterialType { get; set; } = string.Empty;
+        public string Collection { get; set; } = string.Empty;
+        public string ShelfLocation { get; set; } = string.Empty;
         public string Barcode { get; set; } = string.Empty;
         public DateTime? FirstAvailableDate { get; set; }
         public DateTime? LastCkoDate { get; set; }

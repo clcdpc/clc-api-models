@@ -14,9 +14,9 @@ namespace Clc.Api.Models
 
         public string InputString { get; set; } = string.Empty;
 
-        public int LibraryId { get; set; }
+        public int AssignedLibraryId { get; set; }
         public string LibraryName { get; set; } = string.Empty;
-        public int CatalogLinkBranchId => LibraryId + 1;
+        public int CatalogLinkBranchId => AssignedLibraryId + 1;
 
         public int LocalItems { get; set; }
         public int ConsortiumItems { get; set; }
