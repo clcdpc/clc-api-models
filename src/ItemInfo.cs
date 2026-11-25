@@ -5,27 +5,27 @@ namespace Clc.Api.Models
     public class ItemInfo
     {
         public int ItemRecordID { get; set; } = 0;
-        public string Title { get; set; }
-        public string Author { get; set; }
+        public string? Title { get; set; }
+        public string? Author { get; set; }
         public int OwningLibraryID { get; set; }
-        public string OwningLibraryName { get; set; }
-        public string OwningLibraryAbbreviation { get; set; }
+        public string OwningLibraryName { get; set; } = string.Empty;
+        public string? OwningLibraryAbbreviation { get; set; }
         [XmlElement(IsNullable = true)]
-        public string Barcode { get; set; }
+        public string? Barcode { get; set; }
         [XmlElement(IsNullable = true)]
-        public string Prefix { get; set; }
+        public string? Prefix { get; set; }
         [XmlElement(IsNullable = true)]
-        public string Classification { get; set; }
+        public string? Classification { get; set; }
         [XmlElement(IsNullable = true)]
-        public string Cutter { get; set; }
+        public string? Cutter { get; set; }
         [XmlElement(IsNullable = true)]
-        public string Suffix { get; set; }
+        public string? Suffix { get; set; }
         [XmlElement(IsNullable = true)]
-        public string Volume { get; set; }
+        public string? Volume { get; set; }
         [XmlElement(IsNullable = true)]
-        public string ISBN { get; set; }
+        public string? ISBN { get; set; }
         [XmlElement(IsNullable = true)]
-        public string UPC { get; set; }
+        public string? UPC { get; set; }
 
         public ItemInfo()
         {
